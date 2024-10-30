@@ -493,7 +493,7 @@ float compressionFunction(float v,
 
     if (invert)
     {
-        if (v < thr || lim < 1.0001 || v > thr + s)
+        if (v < thr || lim <= 1.0001 || v > thr + s)
         {
             vCompressed = v;
         }
@@ -504,7 +504,7 @@ float compressionFunction(float v,
     }
     else
     {
-        if (v < thr || lim < 1.0001)
+        if (v < thr || lim <= 1.0001)
         {
             vCompressed = v;
         }
