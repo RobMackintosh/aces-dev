@@ -870,7 +870,7 @@ float getFocusGain(float J,
     if (J > thr)
     {
         // Approximate inverse required above threshold
-        float gain = (limitJmax - thr) / max(0.0001, (limitJmax - min(limitJmax, J)));
+        float gain = (limitJmax - thr) / max(0.0001, limitJmax - J);
         return pow(log10(gain), 1. / focusAdjustGain) + 1.;
     }
     else
